@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
+import { Hero } from '../interfaces/hero.interface';
 
 @Injectable({ providedIn: 'root' })
 export class HeroesService {
-  private heroes: any[] = [
+  private heroes: Hero[] = [
     {
       nombre: 'Aquaman',
       bio: 'El poder más reconocido de Aquaman es la capacidad telepática para comunicarse con la vida marina, la cual puede convocar a grandes distancias.',
@@ -57,7 +58,11 @@ export class HeroesService {
     console.log('Services in works APP');
   }
 
-  getHeroes(): any[] {
+  getHeroes() {
     return this.heroes;
+  }
+
+  getHero(i: number) {
+    return this.heroes[i];
   }
 }
