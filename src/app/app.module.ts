@@ -8,11 +8,13 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
-import { HeroComponent } from './components/hero/hero.component';
+import { HeroViewComponent } from './components/hero-view/hero-view.component';
 
 // ROUTES
 import { APP_ROUTING } from './app.routes';
 import { HeroesComponent } from './components/heroes/heroes.component';
+import { HeroSearchComponent } from './components/hero-search/hero-search.component';
+import { HeroCardComponent } from './components/hero-card/hero-card.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { HeroesComponent } from './components/heroes/heroes.component';
     HomeComponent,
     AboutComponent,
     HeroesComponent,
-    HeroComponent,
+    HeroViewComponent,
+    HeroSearchComponent,
+    HeroCardComponent,
   ],
   imports: [BrowserModule, APP_ROUTING],
   providers: [HeroesService],

@@ -5,11 +5,11 @@ import { HeroesService } from 'src/app/services/heroes.services';
 
 @Component({
   selector: 'app-hero',
-  templateUrl: './hero.component.html',
+  templateUrl: './hero-view.component.html',
   styles: [],
 })
-export class HeroComponent implements OnInit {
-  hero: any;
+export class HeroViewComponent implements OnInit {
+  hero: any = {};
 
   constructor(
     private activadedRoute: ActivatedRoute,

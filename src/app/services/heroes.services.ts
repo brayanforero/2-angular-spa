@@ -55,7 +55,7 @@ export class HeroesService {
     },
   ];
   constructor() {
-    console.log('Services in works APP');
+    console.log('Services Hero Work !!');
   }
 
   getHeroes() {
@@ -64,5 +64,20 @@ export class HeroesService {
 
   getHero(i: number) {
     return this.heroes[i];
+  }
+
+  searchHero(term: string) {
+    let heroArr: Hero[] = [];
+
+    for (let i = 0; i < this.heroes.length; i++) {
+      let hero = this.heroes[i];
+      const name = hero.nombre.toLowerCase();
+      if (name.indexOf(term) >= 0) {
+        hero.id = i;
+        heroArr.push(hero);
+      }
+    }
+
+    return heroArr;
   }
 }
